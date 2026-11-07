@@ -10,7 +10,7 @@ install like a normal app (own icon, full screen, works offline).
 | `index.html` | The game itself (same as the online version, plus 3 lines that make it installable) |
 | `manifest.webmanifest` | Tells Android the app's name, icon, colours, and that it runs full screen in landscape |
 | `sw.js` | The "service worker": saves a copy of the game on the phone so it runs without internet |
-| `icons/` | App icons in the sizes Android and iPhone ask for |
+| `*.png` | App icons in the sizes Android and iPhone ask for |
 
 > **Why it needs hosting:** Android only installs PWAs from an `https://` web address. Opening
 > `index.html` straight from your phone's file manager will play the game, but won't offer
@@ -27,7 +27,7 @@ install like a normal app (own icon, full screen, works offline).
    - Click **Create repository**.
 3. On the new repository page, click **uploading an existing file**.
 4. Drag in **everything from this folder**: `index.html`, `manifest.webmanifest`, `sw.js`,
-   `README.md`, and the whole `icons` folder. Click **Commit changes**.
+   `README.md`, and the 4 icon PNG files. Click **Commit changes**.
 5. Go to **Settings** → **Pages** (left menu).
    - Source: **Deploy from a branch**
    - Branch: **main**, folder **/ (root)** → **Save**.
@@ -57,7 +57,7 @@ Share the same link with colleagues and they can install it the same way.
 ## Updating the game later
 
 1. Replace `index.html` in your GitHub repository with the new version (**Add file → Upload files**).
-2. Open `sw.js` in GitHub (pencil icon to edit) and change `bunker-rounds-v1` to `bunker-rounds-v2`
+2. Open `sw.js` in GitHub (pencil icon to edit) and change `bunker-rounds-v3` to `bunker-rounds-v4`
    (then v3, v4 … each time). This tells installed phones to fetch the new version.
 3. Commit. Phones pick up the update the next time the app is opened with internet (sometimes it takes two launches).
 
