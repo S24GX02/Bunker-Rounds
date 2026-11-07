@@ -1,7 +1,7 @@
 // Offline support: keeps a copy of the game on the phone so it runs without internet.
 // Bump VERSION whenever you upload a new index.html, so phones fetch the update.
-const VERSION = 'bunker-rounds-v3';
-const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './maskable-512.png'];
+const VERSION = 'bunker-rounds-v4';
+const CORE = ['./', './index.html', './manifest.webmanifest', './Icons/icon-192.png', './Icons/icon-512.png', './Icons/maskable-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
